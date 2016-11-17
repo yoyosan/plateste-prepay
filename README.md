@@ -1,16 +1,28 @@
-# Installation
+# Instalare
 
 ```
-sudo npm -g install protactor
-hash -rf
+sudo npm -g install webdriver-manager nightwatch
 sudo webdriver-manager update
 ```
 
-# Run
+# Configurare
 
 ```
-tmux new -s webdrive-manager
-webdriver-manager start
-# Detach from tmux ^B + D
-protactor conf.js
+cp nightwatch.json.sample nightwatch.json
+```
+
+Adăugaţi/editaţi valorile necesare în fişierul copiat anterior.
+
+# Execuţie
+
+```
+./start.sh
+# încarcă cartelă Telekom
+nightwatch tests/încărcare-telekom.js
+```
+
+# Curăţenie
+
+```
+rm -rf screenshots/* reports/*
 ```

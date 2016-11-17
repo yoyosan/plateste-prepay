@@ -1,1 +1,5 @@
 node_modules
+conf.js
+reports
+screenshots
+nightwatch.json
