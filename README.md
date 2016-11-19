@@ -26,11 +26,18 @@ Adăugaţi/editaţi valorile necesare în fişierul copiat anterior.
 ## Execuţie
 
 ```
+# pornește webdriver-manager
 ./start.sh
 # încarcă cartelă Telekom
 nightwatch tests/încărcare-telekom.js
 # încarcă cartelă Orange
 nightwatch tests/încărcare-orange.js
+```
+
+Pentru oprirea webdriver-manager, rulează:
+
+```
+./stop.sh
 ```
 
 ## Curăţenie
