@@ -21,13 +21,13 @@ module.exports = {
       .click('input#submit_next')
       .url('{URL}')
       .waitForElementVisible('input#tiCNumber', 5000)
-      .setValue('input#tiCNumber', detalii.card.nr)
+      .setValue('input.card-validity-input', detalii.card.nr)
       .setValue('select#cbExpMounth', detalii.card.lunaExpirare)
       .setValue('select#cbExpYear', detalii.card.anExpirare)
       .setValue('input#cvv2', detalii.card.cvv)
       .setValue('input#nameoncard', detalii.card.nume)
-      // .click('input#AuthorizeButton')
-      // .end()
+      .click('input#AuthorizeButton')
+      .end()
     ;
   }
 };
