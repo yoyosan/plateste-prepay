@@ -27,7 +27,6 @@ module.exports = {
       .setValue('input#cvv2', detalii.card.cvv)
       .setValue('input#nameoncard', detalii.card.nume)
       .click('input#AuthorizeButton')
-      .end()
     ;
   }
 };
