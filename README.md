@@ -1,19 +1,31 @@
 # Încărcare cartele prepay
 
-Cu ajutorul acestei aplicaţii poţi încărca rapid şi uşor cartele prepay
+Cu ajutorul acestor scripturi poţi încărca rapid şi uşor cartele prepay
 pentru următoarele reţele de telefonie:
 - Telekom
 - Orange
 
-Paşii de instalare de mai jos sunt pentru Linux.
-Dacă foloseşti Windows, recomand [Babun](http://babun.github.io/).
+**Atenție!**
+
+* Ambele scripturi se vor opri la ecranul de introducere al codului de
+confirmare a tranzacției trimis de bancă prin SMS către telefonul tău.
 
 ## Instalare
+
+### Linux
 
 ```
 sudo npm -g install webdriver-manager nightwatch
 sudo webdriver-manager update
 ```
+
+### Windows
+
+* Dacă foloseşti Windows, recomand [Babun](http://babun.github.io/).
+* Dacă alegi Babun, trebuie să instalezi următoarele aplicații:
+	* **npm**, descărcându-l de [aici](https://nodejs.org/en/download/)
+	* **tmux**, executând `pact install tmux`
+* Urmează pașii de mai sus pentru a încheia instalarea.
 
 ## Configurare
 
@@ -28,9 +40,17 @@ Adăugaţi/editaţi valorile necesare în fişierul copiat anterior.
 ```
 # pornește webdriver-manager
 ./start.sh
-# încarcă cartelă Telekom
+```
+
+Pentru a încărca o cartelă Telekom, execută:
+
+```
 nightwatch tests/încărcare-telekom.js
-# încarcă cartelă Orange
+```
+
+Pentru a încărca o cartelă Orange, execută:
+
+```
 nightwatch tests/încărcare-orange.js
 ```
 
