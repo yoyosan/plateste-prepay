@@ -12,6 +12,7 @@ module.exports = {
       .click('div.control-group.content-wrapper.span12.clearfix > label > input[type="checkbox"]:nth-child(1)')
       .click('div:nth-child(3) > div.control-group.content-wrapper.span12.clearfix > a')
       .url('{URL}')
+      .acceptAlert()
       .waitForElementVisible('input#fname', 5000)
       .acceptAlert()
       .setValue('input#fname', detalii.prenume)
